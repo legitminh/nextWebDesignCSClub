@@ -23,6 +23,7 @@ export default function ItemBox(props:{
     name:string,
     rating:number,
     price:number
+    status:string | null
 }){
     
     return (
@@ -38,14 +39,17 @@ export default function ItemBox(props:{
                     </div>
                 </div>
                 <Image width={500} height={500} src={props.imgLink} alt="Pretty lego set image"></Image>
-                {/* NEW BOX */}
+                {/* Status BOX */}
+                { (props.status!=null)?(
                 <div className=" absolute bottom-0">
                     <div className=" bg-yellow-400 w-[3rem] h-[1.5rem] ml-[0.5rem] mb-[0.5rem] justify-center items-center flex">
                         <div className=" text-xs">
-                        New
+                        {props.status}
                         </div>
                     </div>
-                </div>
+                </div>):
+                (<div></div>)
+                }  
             </div>
             <div>
                 <div className="mt-[0.5rem]">
