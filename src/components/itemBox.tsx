@@ -22,7 +22,7 @@ export default function ItemBox(props:{
     imgLink:string,
     name:string,
     rating:number,
-    price:number
+    price:number,
     status:string | null
 }){
     
